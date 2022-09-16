@@ -1,14 +1,13 @@
 const router = require('express').Router();
 const { Recipe, Meal } = require('../../models');
 
+// Get all meals
 router.get('/', (req, res) => {
-    // find all categories
-    // be sure to include its associated Products
     Meal.findAll({
         include: [
             {
                 model: Recipe,
-                attributes: ['id', 'title', 'recipe', 'meal_id']
+                attributes: ['id', 'title', 'recipe']
             }
         ]
     })
@@ -19,9 +18,8 @@ router.get('/', (req, res) => {
         })
 });
 
+// Get meal by id (Breakfast: 1, Lunch:2, Dinner:3)
 router.get('/:id', (req, res) => {
-    // find all categories
-    // be sure to include its associated Products
     Meal.findOne({
         where: {
             id: req.params.id
@@ -29,7 +27,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Recipe,
-                attributes: ['id', 'title', 'recipe', 'meal_id']
+                attributes: ['id', 'title', 'recipe']
             }
         ]
     })
