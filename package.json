@@ -20,5 +20,14 @@
     "handlebars": "^4.7.6",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scuratolo26/Food-Lovers.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/scuratolo26/Food-Lovers/issues"
+  },
+  "homepage": "https://github.com/scuratolo26/Food-Lovers#readme"
 }
