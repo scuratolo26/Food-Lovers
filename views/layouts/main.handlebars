@@ -18,10 +18,12 @@
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
+    <a href="../single-recipe.handlebars">New Recipe</a>
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
+    
   </nav>
   <main>
     <aside>
