@@ -17,7 +17,7 @@ Recipe.init(
             allowNull: false,
         },
         recipe: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(10000),
             allowNull: false,
         },
         meal_id: {

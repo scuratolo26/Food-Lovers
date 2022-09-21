@@ -10,8 +10,10 @@
       <div>
         <input type="radio" id="breakfast" name="meal" value="1">
         <label for="breakfast">Breakfast</label><br>
+
         <input type="radio" id="lunch" name="meal" value="2">
         <label for="lunch">Lunch</label><br>
+
         <input type="radio" id="dinner" name="meal" value="3">
         <label for="dinner">Dinner</label>
       </div>
@@ -29,7 +31,7 @@
 
     {{#each posts as |post|}}
     <div class="recipe-card">
-      <div class="">{{title}}</div>
+      <div class="">{{title}} | {{meal.meal_name}} | posted by {{user.username}}</div>
       <div class="recipe-content">{{recipe}}</div>
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </div>

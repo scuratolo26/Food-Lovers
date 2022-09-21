@@ -3,7 +3,7 @@ async function newFormHandler(event) {
 
   const title = document.querySelector('input[name="recipe-title"]').value;
   const recipe = document.querySelector('textarea[name="recipe"]').value;
-  const meal_id = document.querySelector('input[name="meal"]').value
+  const meal_id = document.querySelector('input[name="meal"]:checked').value
 
   const response = await fetch(`/api/recipe`, {
     method: "POST",

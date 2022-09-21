@@ -9,7 +9,7 @@ router.post('/', withAuth, (req, res) => {
         title: req.body.title,
         recipe: req.body.recipe,
         meal_id: req.body.meal_id,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
     })
         .then(dbRecipeData => res.json(dbRecipeData))
         .catch(err => {
@@ -25,6 +25,10 @@ router.get('/', (req, res) => {
             {
                 model: Meal,
                 attributes: ['id', 'meal_name']
+            },
+            {
+                model: User,
+                attributes: ['username']
             }
         ]
     })

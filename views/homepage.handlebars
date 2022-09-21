@@ -1,10 +1,7 @@
 <ul class="post-list">
     {{#each posts as |post|}}
-    {{!-- <li class="card">
-        {{> post-info post }}
-    </li> --}}
     <div class="recipe-card">
-        <div class="">{{title}}</div>
+        <div class="">{{title}} | {{meal.meal_name}} | posted by {{user.username}}</div>
         <div class="recipe-content">{{recipe}}</div>
     </div>
     {{/each}}
