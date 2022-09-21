@@ -1,39 +1,42 @@
-<section>
-  <h2>Post New Recipe</h2>
+<div class="">
+  <section class="row card recipe-card col-12">
+    <h2 class="header">Post New Recipe</h2>
 
-  <form class="new-recipe-form">
-    <div>
-      <label for="recipe-title">Recipe Title</label>
-      <input type="text" id="recipe-title" name="recipe-title" />
-    </div>
-    <div>
-      <label for="recipe">Recipe</label>
-      <input type="text" id="recipe" name="recipe" />
-    </div>
-    <div>
-      <input type="radio" id="breakfast" name="meal" value="1">
-      <label for="breakfast">Breakfast</label><br>
-      <input type="radio" id="lunch" name="meal" value="2">
-      <label for="lunch">Lunch</label><br>
-      <input type="radio" id="dinner" name="meal" value="3">
-      <label for="dinner">Dinner</label>
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+    <form class="new-recipe-form">
+      <div>
+        <label for="recipe-title">Recipe Title</label>
+        <input type="text" id="recipe-title" name="recipe-title" class="form-input" />
+      </div>
+      <div>
+        <input type="radio" id="breakfast" name="meal" value="1">
+        <label for="breakfast">Breakfast</label><br>
+        <input type="radio" id="lunch" name="meal" value="2">
+        <label for="lunch">Lunch</label><br>
+        <input type="radio" id="dinner" name="meal" value="3">
+        <label for="dinner">Dinner</label>
+      </div>
+      <div>
+        <label for="recipe">Recipe</label>
+        <textarea type="text" id="recipe" name="recipe" class="form-input"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+  </section>
 
-{{#if posts.length}}
-<section>
-  <h2>Your Recipes</h2>
-  <ol>
+  {{#if posts.length}}
+  <section class="card recipe-card col-12">
+    <h2 class="header">Your Recipes</h2>
+
     {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
+    <div class="recipe-card">
+      <div class="">{{title}}</div>
+      <div class="recipe-content">{{recipe}}</div>
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
+    </div>
     {{/each}}
-  </ol>
-</section>
-{{/if}}
+
+  </section>
+  {{/if}}
+</div>
 
 <script src="/js/add-post.js"></script>

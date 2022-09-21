@@ -92,17 +92,8 @@ img {
   height: auto;
 }
 
-.painting {
-  width: 50%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-}
-
-.painting-details {
-  text-align: center;
-  padding: 10px 20px;
-  font-weight: bold;
+.post-list{
+  list-style: none;
 }
 
 /* CARDS */
@@ -115,11 +106,21 @@ img {
   color: var(--dark);
 }
 
+.recipe-card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 5px;
+}
+
 .login-card {
   margin: 0 0 20px 0;
   flex: 0 0 50%;
   max-width: 50%;
-  padding: 5px;
+  padding: 5px; 
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   border-style: double;
@@ -142,6 +143,20 @@ img {
   font-size: 1.4rem;
   text-align: center;
   font-weight: bold;
+}
+
+.recipe-card {
+  background-color: #577a7c;
+  color: var(--light);
+}
+
+.recipe-content {
+  border: 2px solid var(--primary);
+  border-radius: 25px;
+  padding: 5px;
+  background-color: var(--light);
+  color: var(--dark);
+  margin: 4px;
 }
 
 .main-name {
