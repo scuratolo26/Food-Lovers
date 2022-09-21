@@ -1,16 +1,17 @@
 <article>
   <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
-    Edit Post
+    Edit Recipe
   </h2>
-  <form class="edit-post-form">
+  <form class="edit-recipe-form">
     <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{ post.post_url}})</span>
+      <h3>{{post.title}}</h3>
+      <textarea name="recipe" class="form-input">{{post.recipe}}</textarea>
+
     </div>
 
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button type="submit" class="btn btn-primary">Save recipe</button>
+    <button type="button" class="delete-recipe-btn btn btn-primary">Delete recipe</button>
   </form>
 </article>
 
