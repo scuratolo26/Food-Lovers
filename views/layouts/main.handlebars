@@ -4,26 +4,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museum</title>
+  <title>Food Lovers</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  {{!-- might need to fix paths to make it work --}}
+  <link rel="stylesheet" type="text/css" href="/public/css/emojionearea.min.css" >
 </head>
 
 <body>
   <header>
-    <h1>Welcome to the Four Seasons Museum</h1>
+    <h1>Welcome to the Food Lover's Blog</h1>
   </header>
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
+    <a href="../single-recipe.handlebars">New Recipe</a>
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
+    
   </nav>
   <main>
     <aside>
-      <h2>Enjoy the galleries!</h2>
+      <h2>Enjoy the recipes!</h2>
     </aside>
     <div class="gallery">
       {{{body}}}
@@ -32,6 +36,10 @@
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  {{!-- might need to change this paths to work --}}
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="/public/js/emojionearea.min.js"></script>
+  
 </body>
 
 </html>
