@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require("../config/connection");
-const { index, Meal, Recipe, User } = require('../models');
+const { Meal, Recipe, User } = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
@@ -13,19 +13,19 @@ router.get('/', (req, res) => {
     ],
     include: [
       {
-      model: Meal,
-      attributes: [
-        'id',
-        'meal_name',
-      ],
-    },
-    {
-      model: User,
-      attributes: [
-        'username'
-      ]
-    }
-  ]
+        model: Meal,
+        attributes: [
+          'id',
+          'meal_name',
+        ],
+      },
+      {
+        model: User,
+        attributes: [
+          'username'
+        ]
+      }
+    ]
   })
     .then(dbRecipeData => {
       const posts = dbRecipeData.map(post => post.get({ plain: true }));
@@ -54,19 +54,19 @@ router.get('/recipe/:id', (req, res) => {
     ],
     include: [
       {
-      model: Meal,
-      attributes: [
-        'id',
-        'meal_name',
-      ],
-    },
-    {
-      model: User,
-      attributes: [
-        'username'
-      ]
-    }
-  ]
+        model: Meal,
+        attributes: [
+          'id',
+          'meal_name',
+        ],
+      },
+      {
+        model: User,
+        attributes: [
+          'username'
+        ]
+      }
+    ]
   })
     .then(dbRecipeData => {
       if (!dbRecipeData) {

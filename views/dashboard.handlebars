@@ -1,14 +1,22 @@
 <section>
-  <h2>Create New Post</h2>
+  <h2>Post New Recipe</h2>
 
-  <form class="new-post-form">
+  <form class="new-recipe-form">
     <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+      <label for="recipe-title">Recipe Title</label>
+      <input type="text" id="recipe-title" name="recipe-title" />
     </div>
     <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+      <label for="recipe">Recipe</label>
+      <input type="text" id="recipe" name="recipe" />
+    </div>
+    <div>
+      <input type="radio" id="breakfast" name="meal" value="1">
+      <label for="breakfast">Breakfast</label><br>
+      <input type="radio" id="lunch" name="meal" value="2">
+      <label for="lunch">Lunch</label><br>
+      <input type="radio" id="dinner" name="meal" value="3">
+      <label for="dinner">Dinner</label>
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
@@ -16,7 +24,7 @@
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2>Your Recipes</h2>
   <ol>
     {{#each posts as |post|}}
     <li>
