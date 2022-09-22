@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: Recipe,
-                attributes: ['id', 'title', 'recipe']
+                attributes: ['id', 'title', 'recipe', 'user_id']
             }
         ]
     })
@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Recipe,
-                attributes: ['id', 'title', 'recipe']
+                attributes: ['id', 'title', 'recipe', 'user_id']
             }
         ]
     })
