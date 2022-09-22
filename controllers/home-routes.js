@@ -69,23 +69,23 @@ router.get('/', (req, res) => {
 //       }
 //     ]
 //   })
-//     .then(dbRecipeData => {
-//       if (!dbRecipeData) {
-//         res.status(404).json({ message: 'No recipe found with this id' });
-//         return;
-//       }
+// .then(dbRecipeData => {
+//   if (!dbRecipeData) {
+//     res.status(404).json({ message: 'No recipe found with this id' });
+//     return;
+//   }
 
-//       const post = dbRecipeData.get({ plain: true });
+//   const post = dbRecipeData.get({ plain: true });
 
-//       res.render('single-recipe', {
-//         post,
-//         loggedIn: req.session.loggedIn
-//       });
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
+//   res.render('single-recipe', {
+//     post,
+//     loggedIn: req.session.loggedIn
+//   });
+// })
+// .catch(err => {
+//   console.log(err);
+//   res.status(500).json(err);
+// });
 // });
 
 router.get('/login', (req, res) => {

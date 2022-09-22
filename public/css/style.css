@@ -153,7 +153,7 @@ img {
 .recipe-content {
   border: 2px solid var(--primary);
   border-radius: 25px;
-  padding: 5px;
+  padding: 10px;
   background-color: var(--light);
   color: var(--dark);
   margin: 4px;
